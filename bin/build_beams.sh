@@ -88,6 +88,16 @@ fCompileWhApps() {
     echo
 }
 
+fCompileExmppmgr() {
+    echo "======================================================="
+    echo "  Compiling Erlang Xmpp Manager"
+    echo "======================================================="
+    echo "# cd ${WDIR}/exmppmgr; ${REBAR} clean compile"
+
+    cd ${WDIR}/exmppmgr; ${REBAR} clean compile
+    echo
+}
+
 fWelcome
 
 fExportLibs
@@ -96,6 +106,7 @@ fCompileUtils
 fCompileWhistleLibs
 fCompileEcallmgr
 fCompileWhApps
+fCompileExmppmgr
 
 cd `readlink -f $0` # realpath
 
